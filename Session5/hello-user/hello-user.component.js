@@ -7,10 +7,19 @@ app.component('helloUser', {
         console.log('response received')
         console.log(typeof response.data.data)
         $scope.data = response.data.data
+        $scope.filteredData = $scope.data
       }, function (response) {
         //failure
       })
 
     $scope.data = []
+    $scope.filteredData = []
+    $scope.search = ''
+
+    $scope.$watch('search', function(newValue, oldValue) {
+      $scope.filteredData = $scope.data.filter(function(item) {
+        return item.Address.indexOf($scope.search) !== -1
+      })
+    })
   }]
 })

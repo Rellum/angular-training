@@ -1,10 +1,12 @@
+<input type="" ng-model="search" />
+<br />
 <table>
   <tr>
     <th ng-repeat="(key, value) in data[0]">
       {{key}}
     </th>
   </tr>
-  <tr ng-repeat="datum in data">
+  <tr ng-repeat="datum in filteredData">
     <td ng-repeat="(key, value) in datum">
       {{value}}
     </td>
