@@ -19,6 +19,11 @@ app.component('helloUser', {
       evt.preventDefault()
       $scope.myName = "new value"
     }
+
+    $scope.toggleValue = function(evt) {
+      evt.preventDefault()
+      $scope.hasAValue = !$scope.hasAValue
+    }
   }
 })
 

@@ -6,7 +6,7 @@
 </ul>
 
 {{myName}} <input type="" ng-model="myName" />
-<button ng-click="changeValue($event)">Click me!</button>
+<button ng-click="changeValue($event)">Click me to change my name!</button>
 
 <div ng-if="hasAValue">
   don't show
@@ -21,4 +21,5 @@
 </div>
 
 <input type="checkbox" ng-model="hasAValue"> has a value<br>
+<button ng-click="toggleValue($event)">Click me to toggle the boolean!</button>
 
