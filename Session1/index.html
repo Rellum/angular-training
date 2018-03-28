@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+
+<html lang="en-US" ng-app="trainingApp">
+<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.6/angular.min.js"></script>
+
+<body>
+  <div ng-controller="attendeeController">
+
+    {{myName}}
+
+  </div>
+  <script>
+
+    var app = angular.module('trainingApp', [])
+
+    app.controller('attendeeController', function ($scope) {
+        $scope.myName = "[insert your name here]"
+    })
+  </script>
+</body>
+</html>
