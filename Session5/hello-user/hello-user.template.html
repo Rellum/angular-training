@@ -1,9 +1,14 @@
-<input type="" ng-model="search" />
+{{search}}
 <br />
 <table>
   <tr>
     <th ng-repeat="(key, value) in data[0]">
       {{key}}
+    </th>
+  </tr>
+  <tr>
+    <th ng-repeat="(key, value) in data[0]">
+        <input type="" ng-model="search[key]"/>
     </th>
   </tr>
   <tr ng-repeat="datum in filteredData">

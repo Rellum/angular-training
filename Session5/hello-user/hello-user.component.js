@@ -14,11 +14,13 @@ app.component('helloUser', {
 
     $scope.data = []
     $scope.filteredData = []
-    $scope.search = ''
+    $scope.search = {}
 
     $scope.$watch('search', function(newValue, oldValue) {
       $scope.filteredData = $scope.data.filter(function(item) {
-        return item.Address.indexOf($scope.search) !== -1
+        return Object.keys($scope.search).reduce(function (acc, key) {
+          return item.Address.indexOf($scope.search) !== -1
+        })
       })
     })
   }]
