@@ -1,11 +1,29 @@
 {{$myName}}
-<ul>
-  <li ng-repeat="attendee in attendees">
-    {{myName}} {{$index}} {{$even}} {{$odd}} {{$first}} {{$last}} <a href="#" ng-click="handleAttendeeClick($event, attendee)">{{attendee.name}}</a>
-  </li>
-</ul>
+<table>
+  <tr>
+    <th>My Name</th>
+    <th>Index</th>
+    <th>Even</th>
+    <th>Odd</th>
+    <th>First</th>
+    <th>Last</th>
+    <th>Attendee Name</th>
+  </tr>
+  <tr ng-repeat="attendee in attendees">
+    <td>{{myName}}</td>
+    <td>{{$index}}</td>
+    <td>{{$even}}</td>
+    <td>{{$odd}}</td>
+    <td>{{$first}}</td>
+    <td>{{$last}}</td>
+    <td>
+      <a href="#" ng-click="handleAttendeeClick($event, attendee)">{{attendee.name}}</a>
+    </td>
+  </tr>
+</table>
 
-{{myName}} <input type="" ng-model="myName" />
+{{myName}}
+<input type="" ng-model="myName" />
 <button ng-click="changeValue($event)">Click me to change my name!</button>
 
 <div ng-if="hasAValue">
@@ -20,6 +38,6 @@
   also show this always
 </div>
 
-<input type="checkbox" ng-model="hasAValue"> has a value<br>
+<input type="checkbox" ng-model="hasAValue"> has a value
+<br>
 <button ng-click="toggleValue($event)">Click me to toggle the boolean!</button>
-
