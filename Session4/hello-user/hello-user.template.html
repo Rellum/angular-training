@@ -7,7 +7,7 @@
 
 {{myName}} <input type="" ng-model="myName" />
 
-<div ng-if="false">
+<div ng-if="hasAValue">
   don't show
 </div>
 
@@ -15,7 +15,9 @@
   show this always
 </div>
 
-<div ng-class="{ 'off': true }">
+<div ng-class="{ 'off': hasAValue }">
   also show this always
 </div>
+
+<input type="checkbox" ng-model="hasAValue"> has a value<br>
 
