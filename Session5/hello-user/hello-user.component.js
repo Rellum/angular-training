@@ -19,10 +19,9 @@ app.component('helloUser', {
     $scope.$watch('search', function(newValue, oldValue) {
       $scope.filteredData = $scope.data.filter(function(item) {
         return Object.keys($scope.search).reduce(function (acc, key) {
-          return !!$scope.search[key] ||
-            item[key].indexOf($scope.search[key]) !== -1
+          return acc && (!$scope.search[key].length || String(item[key]).indexOf($scope.search[key]) !== -1)
         }, true)
       })
-    })
+    }, true)
   }]
 })
