@@ -26,11 +26,17 @@
 
   <script>
 
-    function testFunction(a, b, c) {
-      alert(a+b+c)
+    function testFunction(a, b) {
+      return a + b
     }
 
-    console.log(testFunction)
+    alert(testFunction(1, 2))
+
+    function testFunction(a, b) {
+      return a - b
+    }
+
+    alert(testFunction(1, 2))
 
   </script>
 </body>
