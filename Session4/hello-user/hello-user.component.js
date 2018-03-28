@@ -3,11 +3,14 @@ app.component('helloUser', {
   controller: function ($scope) {
     $scope.attendees = [
       {
-        name: 'Person 1'
+        name: 'Person 1',
+        data: 'Other data 1'
       }, {
-        name: 'Person 2'
+        name: 'Person 2',
+        data: 'Other data 2'
       }, {
-        name: 'Person 3'
+        name: 'Person 3',
+        data: 'Other data 3'
       }
     ]
 
@@ -23,6 +26,11 @@ app.component('helloUser', {
     $scope.toggleValue = function(evt) {
       evt.preventDefault()
       $scope.hasAValue = !$scope.hasAValue
+    }
+
+    $scope.handleAttendeeClick = function(evt, attendee) {
+      evt.preventDefault()
+      alert(attendee.data)
     }
   }
 })

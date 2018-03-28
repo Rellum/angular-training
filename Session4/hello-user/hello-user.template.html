@@ -1,7 +1,7 @@
 {{$myName}}
 <ul>
   <li ng-repeat="attendee in attendees">
-    {{myName}} {{$index}} {{$even}} {{$odd}} {{$first}} {{$last}} {{attendee.name}}
+    {{myName}} {{$index}} {{$even}} {{$odd}} {{$first}} {{$last}} <a href="#" ng-click="handleAttendeeClick($event, attendee)">{{attendee.name}}</a>
   </li>
 </ul>
 
