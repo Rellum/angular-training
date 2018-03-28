@@ -1,1 +1,12 @@
-{{test}}
+<table>
+  <tr>
+    <th ng-repeat="(key, value) in data[0]">
+      {{key}}
+    </th>
+  </tr>
+  <tr ng-repeat="datum in data">
+    <td ng-repeat="(key, value) in datum">
+      {{value}}
+    </td>
+  </tr>
+</table>
