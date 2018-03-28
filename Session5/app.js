@@ -5,3 +5,9 @@ app.service('coolService', function() {
     return 'no longer ' + name
   }
 })
+
+app.filter('translateThis', function () {
+  return function (txt) {
+    return "translated: " + txt
+  }
+})
