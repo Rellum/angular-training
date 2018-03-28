@@ -12,8 +12,13 @@ app.component('helloUser', {
     ]
 
     $scope.hasAValue = true
-
+    $scope.myColor = 'blue'
     $scope.myName = 'simon'
+
+    $scope.changeValue = function(evt) {
+      evt.preventDefault()
+      $scope.myName = "new value"
+    }
   }
 })
 
